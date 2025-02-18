@@ -1,0 +1,140 @@
+.li-home-xs {
+	display: none;
+}
+
+.nav-xs {
+	display: none;
+}
+
+body {
+	font-family: $defaultFont;
+	background-color: #d9d9d9;
+}
+
+.ml-puzzle-img {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	/* Ensures it doesn't interfere with clicks */
+	z-index: -1;
+	/* Pushes it behind everything */
+}
+
+@keyframes slideInFromLeft {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 0.4;
+	}
+}
+
+@keyframes slideInFromRight {
+	0% {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 0.4;
+	}
+}
+
+.ml-left-puzzle {
+	position: absolute;
+	top: 10%;
+	left: -4%;
+	width: 35%;
+	/* Adjust as needed */
+	opacity: 0.4;
+	/* Adjust transparency if needed */
+	animation: slideInFromLeft 0.8s ease-out
+}
+
+.ml-right-puzzle {
+	position: absolute;
+	top: 10%;
+	right: -6%;
+	width: 40%;
+	/* Adjust as needed */
+	opacity: 0.5;
+	/* Adjust transparency if needed */
+	animation: slideInFromRight 0.8s ease-out
+}
+
+.li-home-ml,
+.home-wrapper,
+.ml-navbar {
+	margin: 0 22.5%;
+}
+
+.li-home-ml {
+	display: flex;
+	background-color: #efefef;
+	align-items: center;
+	position: relative;
+
+	img {
+		width: 15%;
+		margin: 1em 0em 1em 3em;
+	}
+
+	.ml-logo-text {
+		margin-left: 5px;
+		align-items: center;
+		// font-weight: 700;
+		font-size: 2.5rem;
+	}
+}
+
+.ml-navbar {
+	background-color: #e4e4e4;
+	display: block;
+
+	.ml-nav-ul {
+		display: flex;
+		gap: 20px;
+		/* Adjust the spacing between menu items */
+		padding: 10px 0;
+		/* Add padding to make it visually appealing */
+		list-style: none !important;
+	}
+
+	.ml-nav-ul li {
+		display: inline-block;
+	}
+
+	.ml-nav-ul li:first-child {
+		margin-left: 2em;
+	}
+
+	.ml-nav-ul li a {
+		text-decoration: none;
+		color: black;
+		padding: 10px 15px;
+		/* Add padding for a better clickable area */
+		transition: color 0.3s ease-in-out;
+	}
+
+	.ml-nav-ul li a:hover {
+		color: #4784BF;
+		/* Change color on hover */
+	}
+}
+
+.home-wrapper {
+	padding-top: 3em;
+	height: 90vh;
+
+	.btn-div {
+		margin-top: 0;
+	}
+}

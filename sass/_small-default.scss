@@ -1,0 +1,175 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+/*  apply a natural box layout model to all elements  */
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.li-home-ml,
+.ml-navbar,
+.ml-puzzle-img {
+	display: none;
+}
+
+body {
+	font-family: $defaultFont;
+	background-color: #fcfcfc;
+}
+
+@keyframes slideInFromTop {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.li-home-xs {
+	position: relative; // Ensures child elements use this as reference
+	animation: slideInFromTop 0.8s ease-out;
+	/* Apply the slide-in effect */
+
+	.ee-banner {
+		width: 100%;
+		border-radius: 0 0 50px 50px;
+		display: block; // Ensures no extra space below the image
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	}
+
+	.banner-text {
+		position: absolute;
+		top: 75%; // Moves the text inside the image
+		left: 50%;
+		transform: translate(-50%, -50%); // Centers the text
+		text-align: center;
+		color: rgb(0, 0, 0); // Ensure visibility
+		font-size: 1.5rem;
+
+		.banner-position {
+			margin-top: .5em;
+			font-size: 1rem;
+		}
+	}
+}
+
+.home-wrapper {
+	background-color: #fcfcfc;
+
+	.btn-div {
+		margin-top: 3em;
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+
+		.ci-btn,
+		.co-btn {
+			width: 45%; // Keeping your defined width
+			border-radius: 20px; // Keeping your border-radius
+			border: none;
+			cursor: pointer; // Indicates it's clickable
+			transition: all 0.2s ease-in-out; // Smooth effect
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Adds initial shadow
+
+			&:hover {
+				opacity: 0.85; // Slight fade effect on hover
+				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); // More shadow on hover
+			}
+
+			&:active {
+				transform: scale(0.96); // Slight press-down effect
+				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); // Smaller shadow when pressed
+			}
+		}
+
+	}
+
+	.home-content {
+		margin-top: 1.75em;
+		margin-left: 1em;
+		margin-right: 1em;
+
+		.hc-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 1.75em;
+			padding: 0 1em;
+			font-size: 1.1rem;
+
+			.todayrec-text {
+				text-align: left;
+			}
+
+			.show-all-link {
+				text-align: right;
+
+				a {
+					text-decoration: none;
+					color: #4784BF;
+				}
+
+				a:hover {
+					color: #7dacdb;
+					font-weight: 700;
+				}
+
+				a:active {
+					color: #7dacdb;
+				}
+			}
+		}
+
+		.hc-main {
+			margin-top: 2em;
+
+			.hc-table {
+				font-size: .8rem;
+				width: 100%;
+				border-collapse: collapse;
+				margin: 0 auto;
+				border: 1px solid #ccc;
+
+				th,
+				td {
+					border: 1px solid #ddd;
+					padding: 5px;
+					text-align: center;
+				}
+
+				th {
+					background-color: #f4f4f4;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+.nav-xs {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #efefef;
+	height: 4em;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	box-shadow: 0 -3.5px 5px rgba(0, 0, 0, 0.3);
+
+	.nav-xs-icons {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 90%; // Adjust this based on your layout needs
+	}
+}
