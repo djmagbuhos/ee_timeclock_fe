@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ml-puzzle-img">
+        <img src="img/left-puzzle1.png" class="ml-left-puzzle" alt="">
+        <img src="img/right-puzzle1.png" class="ml-right-puzzle" alt="">
+    </div>
+    <!-- HEADER -->
+    <div class="body-wrapper">
+        <header class="li-showrec-xs">
+            <img src="img/banner-rest.jpg" class="banner-rest" alt="Everyeight logo">
+        </header>
+
+        <header class="li-home-ml">
+            <!-- ml header -->
+            <img src="img/ee-logo.png" class="ee-logo-ml" alt="Everyeight logo">
+            <span class="ml-logo-text">Everyeight</span>
+            <div class="user-container">
+                <div class="user-pfp">
+                    <img src="img/default-user.jpg" alt="user profile picture">
+                </div>
+
+                <div class="user-dd">
+                    <ul class="profile-header">
+                        <li  class="profile-dropdown"><a href="#">Daniel Padilla</a>
+                            <ul class="profile-dd">
+                                <li><a href="#">My account</a></li>
+                                <li><a href="#">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <nav class="clearfix ml-navbar">
+            <ul class="ml-nav-ul">
+                <li><a href="#">Home</a></li>
+                <li><a href="">Time Record</a></li>
+            </ul>
+        </nav>
+
+        <!-- END HEADER -->
+
+        <!-- MAIN CONTENT -->
+        <div class="showrec-wrapper">
+            <h1 class="showrec-header">
+                Show Time Records
+            </h1>
+
+            <div class="sr-filter">
+                <fieldset>
+                    <div class="sr-filter-content">
+                        <form action="">
+                            <label for="month">
+                                Month: 
+                            </label>
+                            <select name="month" id="">
+                                <option value="all">All</option>
+                                <option value="1">Jan</option>
+                                <option value="2">Feb</option>
+                                <option value="3">Mar</option>
+                                <option value="4">Apr</option>
+                                <option value="5">May</option>
+                                <option value="6">Jun</option>
+                                <option value="7">Jul</option>
+                                <option value="8">Aug</option>
+                                <option value="9">Sep</option>
+                                <option value="10">Oct</option>
+                                <option value="11">Nov</option>
+                                <option value="12">Dec</option>
+                            </select>
+                            
+                            <label for="day">
+                                Day:
+                            </label>
+                            <select name="day" id="">
+                                <option value="all">All</option>
+                                <!-- Loop to generate 1-31 -->
+                                <script>
+                                    for (let i = 1; i <= 31; i++) {
+                                        document.write(`<option value="${i}">${i}</option>`);
+                                    }
+                                </script>
+                            </select>
+                        
+                            <label for="year">
+                                Year:
+                            </label>
+                            <select name="year" id="">
+                                <!-- Loop to generate years 2025-2030 -->
+                                <script>
+                                    for (let i = 2025; i <= 2030; i++) {
+                                        document.write(`<option value="${i}">${i}</option>`);
+                                    }
+                                </script>
+                            </select>
+                        
+                            <input type="submit">
+                        </form>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="sr-content">
+                <table class="sr-table">
+                    <tr>
+                        <th>Date</th>
+                        <th>Time In</th>
+                        <th>Time Out</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td>01/06/2025</td>
+                        <td>09:00</td>
+                        <td>01:03</td>
+                        <td>04:03</td>
+                    </tr>
+                    <tr>
+                        <td>01/06/2025</td>
+                        <td>02:01</td>
+                        <td>06:04</td>
+                        <td>04:03</td>
+                    </tr>
+                    <tr>
+                        <td>01/06/2025</td>
+                        <td>09:00</td>
+                        <td>01:03</td>
+                        <td>04:03</td>
+                    </tr>
+                    <tr>
+                        <td>01/06/2025</td>
+                        <td>02:01</td>
+                        <td>06:04</td>
+                        <td>04:03</td>
+                    </tr>
+                    <tr>
+                        <td>01/06/2025</td>
+                        <td>09:00</td>
+                        <td>01:03</td>
+                        <td>04:03</td>
+                    </tr>
+                    <tr>
+                        <td>01/06/2025</td>
+                        <td>02:01</td>
+                        <td>06:04</td>
+                        <td>04:03</td>
+                    </tr>
+                    <tr>
+                        <td>01/06/2025</td>
+                        <td>09:00</td>
+                        <td>01:03</td>
+                        <td>04:03</td>
+                    </tr>
+                    <tr>
+                        <td>01/06/2025</td>
+                        <td>02:01</td>
+                        <td>06:04</td>
+                        <td>04:03</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- END MAIN CONTENT -->
+
+        <!-- XS BOT NAV -->
+        <div class="nav-xs">
+            <div class="nav-xs-icons">
+                <img src="img/icons/show-all.png" class="show-all-ia" alt="show logs logo">
+                <img src="img/icons/home-active.png" class="home-a" alt="home logo">
+                <img src="img/icons/more.png" class="show-more-inactive" alt="show more">
+            </div>
+        </div>
+        <!-- END XS BOT NAV -->
+    </div>
+
+    <footer class="ml-footer">
+        <p>&copy; 2024 - Everyeight Company - <a href="#">Contact Us</a></p>
+    </footer>
+</body>
+</html>

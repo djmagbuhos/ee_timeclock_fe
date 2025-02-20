@@ -8,78 +8,110 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="ml-puzzle-img">
-        <img src="img/left-puzzle1.png" class="ml-left-puzzle" alt="">
-        <img src="img/right-puzzle1.png" class="ml-right-puzzle" alt="">
-    </div>
-    <header class="li-home-xs">
-        <img src="img/Banner xs.jpg" class="ee-banner" alt="Everyeight logo">
-        <div class="banner-text">
-            <p class="banner-name">
-                Daniel Padilla
-            </p>
-            <p class="banner-position">
-                Web Developer
-            </p>
+    <!-- HEADER -->
+    <div class="body-wrapper">
+        <div class="ml-puzzle-img">
+            <img src="img/left-puzzle1.png" class="ml-left-puzzle" alt="">
+            <img src="img/right-puzzle1.png" class="ml-right-puzzle" alt="">
         </div>
-    </header>
+        <header class="li-home-xs">
+            <img src="img/Banner xs.jpg" class="ee-banner" alt="Everyeight logo">
+            <div class="banner-text">
+                <p class="banner-name">
+                    Daniel Padilla
+                </p>
+                <p class="banner-position">
+                    Web Developer
+                </p>
+            </div>
+        </header>
 
-    <header class="li-home-ml">
-        <img src="img/ee-logo.png" class="ee-logo-ml" alt="Everyeight logo">
-        <span class="ml-logo-text">Everyeight</span>
-    </header>
+        <header class="li-home-ml">
+            <!-- ml header -->
+            <img src="img/ee-logo.png" class="ee-logo-ml" alt="Everyeight logo">
+            <span class="ml-logo-text">Everyeight</span>
+            <div class="user-container">
+                <div class="user-pfp">
+                    <img src="img/default-user.jpg" alt="user profile picture">
+                </div>
 
-    <nav class="clearfix ml-navbar">
-        <ul class="ml-nav-ul">
-            <li><a href="#">Home</a></li>
-            <li><a href="">Time Record</a></li>
-        </ul>
-    </nav>
+                <div class="user-dd">
+                    <ul class="profile-header">
+                        <li  class="profile-dropdown"><a href="#">Daniel Padilla</a>
+                            <ul class="profile-dd">
+                                <li><a href="#">My account</a></li>
+                                <li><a href="#">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
 
-    <div class="home-wrapper">
-        <div class="btn-div">
-            <img src="img/clock-in-btn.jpg" alt="clockin button" class="ci-btn">
-            <img src="img/clock-out-btn.jpg" alt="clockout button" class="co-btn">
-        </div>
+        <nav class="clearfix ml-navbar">
+            <ul class="ml-nav-ul">
+                <li><a href="#">Home</a></li>
+                <li><a href="">Time Record</a></li>
+            </ul>
+        </nav>
 
-        <div class="home-content">
-            <div class="hc-header">
-                <span class="todayrec-text">Today's Record</span>
-                <span class="show-all-link"><a href="">Show all record</a></span>
+        <!-- END HEADER -->
+
+        <!-- MAIN CONTENT -->
+        <div class="home-wrapper">
+            <div class="btn-div">
+                <img src="img/clock-in-btn.jpg" alt="clockin button" class="ci-btn">
+                <img src="img/clock-out-btn.jpg" alt="clockout button" class="co-btn">
             </div>
 
-            <div class="hc-main">
-                <table class="hc-table">
-                    <tr>
-                        <th>Date</th>
-                        <th>Time In</th>
-                        <th>Time Out</th>
-                        <th>Total</th>
-                    </tr>
+            <div class="home-content">
+                <div class="hc-header">
+                    <span class="todayrec-text">Today's Record</span>
+                    <span class="show-all-link"><a href="">Show all record</a></span>
+                </div>
 
-                    <tr>
-                        <td>01/01/2000</td>
-                        <td>09:00:00</td>
-                        <td>13:00:00</td>
-                        <td>4</td>
-                    </tr>
+                <div class="hc-main">
+                    <table class="hc-table">
+                        <tr>
+                            <th>Date</th>
+                            <th>Time In</th>
+                            <th>Time Out</th>
+                            <th>Total</th>
+                        </tr>
 
-                    <tr>
-                        <td>01/01/2000</td>
-                        <td>14:00:00</td>
-                        <td>18:00:00</td>
-                        <td>4</td>
-                    </tr>
-                </table>
+                        <tr>
+                            <td>01/01/2000</td>
+                            <td>09:00:00</td>
+                            <td>13:00:00</td>
+                            <td>4</td>
+                        </tr>
+
+                        <tr>
+                            <td>01/01/2000</td>
+                            <td>14:00:00</td>
+                            <td>18:00:00</td>
+                            <td>4</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="nav-xs">
-        <div class="nav-xs-icons">
-            <img src="img/icons/show-all.png" class="show-all-ia" alt="show logs logo">
-            <img src="img/icons/home-active.png" class="home-a" alt="home logo">
-            <img src="img/icons/more.png" class="show-more-inactive" alt="show more">
+
+        <!-- END MAIN CONTENT -->
+
+        <!-- XS BOT NAV -->
+        <div class="nav-xs">
+            <div class="nav-xs-icons">
+                <img src="img/icons/show-all.png" class="show-all-ia" alt="show logs logo">
+                <img src="img/icons/home-active.png" class="home-a" alt="home logo">
+                <img src="img/icons/more.png" class="show-more-inactive" alt="show more">
+            </div>
         </div>
+        <!-- END XS BOT NAV -->
     </div>
+
+    <footer class="ml-footer">
+        <p>&copy; 2024 - Everyeight Company - <a href="#">Contact Us</a></p>
+    </footer>
 </body>
 </html>

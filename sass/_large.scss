@@ -1,0 +1,46 @@
+// ------------ MAIN PAGE -------------- //
+.btn-div {
+    gap: 3em !important;
+
+    .ci-btn,
+    .co-btn {
+        width: 30% !important;
+    }
+}
+
+.home-content {
+    width: 70%;
+    margin: 0 auto !important;
+}
+
+// ------------- END OF MAIN PAGE -----------//
+//-------------------------------------------//
+//-------------SHOW RECORD PAGE--------------//
+
+.body-wrapper {
+    margin: 0 auto;
+    width: 700px;
+
+}
+
+.sr-filter {
+    width: 80%;
+    margin: 0 auto;
+
+    fieldset {
+        padding: .25em 0;
+
+        select {
+            margin-right: 3em;
+            margin-bottom: 2px;
+        }
+    }
+}
+
+//-----------END SHOW RECORD PAGE-------------//
+//--------------------------------------------//
+//------------ADMIN REC LIST------------------//
+
+.body-wrapper-admin {
+    max-width: 800px;
+}

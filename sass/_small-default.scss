@@ -11,9 +11,14 @@ html {
 	box-sizing: border-box;
 }
 
+// ---------MAIN PAGE----------- //
+
+
+
 .li-home-ml,
 .ml-navbar,
-.ml-puzzle-img {
+.ml-puzzle-img,
+.ml-footer {
 	display: none;
 }
 
@@ -62,8 +67,12 @@ body {
 	}
 }
 
-.home-wrapper {
+.body-wrapper {
+	height: 115vh;
 	background-color: #fcfcfc;
+}
+
+.home-wrapper {
 
 	.btn-div {
 		margin-top: 3em;
@@ -172,4 +181,115 @@ body {
 		align-items: center;
 		width: 90%; // Adjust this based on your layout needs
 	}
+}
+
+// ------------END MAIN PAGE-------------- //
+
+// ---------------------------------------//
+
+// ----------SHOW RECORD PAGE------------- //
+
+.li-showrec-xs {
+	position: relative; // Ensures child elements use this as reference
+	animation: slideInFromTop 0.8s ease-out;
+	/* Apply the slide-in effect */
+
+	.banner-rest {
+		width: 100%;
+		border-radius: 0 0 50px 50px;
+		display: block; // Ensures no extra space below the image
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	}
+}
+
+.showrec-wrapper {
+	.showrec-header {
+		margin-top: 2em;
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	.sr-filter {
+		fieldset {
+			border: solid 1px;
+			border-radius: 5px;
+			border-color: rgb(170, 170, 170);
+			text-align: center;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			margin: 4% 10px 2em 4%;
+
+			form {
+				font-size: .8rem;
+
+				input,
+				select {
+					border-radius: 5px;
+				}
+
+				select {
+					font-size: .75rem;
+				}
+
+				input[type="submit"] {
+					background-color: #aac864;
+					cursor: pointer;
+					border: 2px solid #008000;
+					margin-bottom: 10px;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+
+	.sr-content {
+		margin-left: 4%;
+		margin-right: 4%;
+		padding-bottom: 3em;
+
+		.sr-table {
+			font-size: .8rem;
+			width: 100%;
+			border-collapse: collapse;
+			margin: 0 auto;
+			border: 1px solid #ccc;
+
+			th,
+			td {
+				border: 1px solid #ddd;
+				padding: 5px;
+				text-align: center;
+			}
+
+			th {
+				background-color: #f4f4f4;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+//-----------END SHOW RECORD PAGE-------------//
+//--------------------------------------------//
+//------------ADMIN REC LIST------------------//
+
+.body-wrapper-admin {
+
+	fieldset {
+		border-radius: 20px !important;
+	}
+
+	form {
+		margin-bottom: .5em;
+	}
+
+	.empid-div {
+		margin-top: .5em;
+
+		.emp-input-id {
+			width: 100px;
+			margin-bottom: 3px;
+		}
+	}
+
 }
