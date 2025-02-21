@@ -9,14 +9,12 @@
 body {
 	font-family: $defaultFont;
 	background-color: #d9d9d9;
-	margin: 0px auto;
+	margin: auto auto;
 }
 
 .ml-puzzle-img {
 	display: block;
 	position: fixed;
-	top: 0;
-	left: 0;
 	width: 100%;
 	height: 100%;
 	pointer-events: none;
@@ -49,9 +47,9 @@ body {
 
 .ml-left-puzzle {
 	position: absolute;
-	top: 10%;
+	top: 25%;
 	left: 0%;
-	width: 25%;
+	width: 27%;
 	/* Adjust as needed */
 	opacity: 0.4;
 	/* Adjust transparency if needed */
@@ -60,7 +58,7 @@ body {
 
 .ml-right-puzzle {
 	position: absolute;
-	top: 10%;
+	top: 25%;
 	right: -2%;
 	width: 29%;
 	/* Adjust as needed */
@@ -71,7 +69,7 @@ body {
 
 .body-wrapper {
 	margin: 0 20%;
-	height: 100vh;
+	min-height: 100vh;
 }
 
 .li-home-ml {
@@ -275,6 +273,28 @@ body {
 .body-wrapper-admin {
 	max-width: 700px;
 	margin: 0 auto;
-	height: 100vh;
-	background-color: white;
+	min-height: 100vh;
+	background-color: rgba(255, 255, 255, 0.40);
+	padding-bottom: 4em;
+}
+
+//------------END ADMIN REC LIST---------------//
+//---------------------------------------------//
+//--------------------------------------------//
+//---------------EMPLOYEE LIST----------------//
+
+.emplist-wrapper {
+	width: 95% !important;
+
+	.elist-container {
+		width: 100%;
+
+		.emplist-div {
+			float: left;
+			width: 48%;
+			margin: 5px;
+
+			.el-img-div {}
+		}
+	}
 }

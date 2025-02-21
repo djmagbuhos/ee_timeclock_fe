@@ -13,6 +13,18 @@
     margin: 0 auto !important;
 }
 
+.ml-left-puzzle {
+    top: 10%;
+    width: 25%;
+    animation: slideInFromLeft 0.8s ease-out
+}
+
+.ml-right-puzzle {
+    position: absolute;
+    top: 10%;
+    animation: slideInFromRight 0.8s ease-out
+}
+
 // ------------- END OF MAIN PAGE -----------//
 //-------------------------------------------//
 //-------------SHOW RECORD PAGE--------------//
@@ -43,4 +55,22 @@
 
 .body-wrapper-admin {
     max-width: 800px;
+}
+
+//--------------END ADMIN REC LIST---------------//
+//---------------------------------------------//
+//---------------EMPLOYEE LIST-----------------//
+
+.elist-container {
+    justify-content: center;
+    width: 100%;
+
+    .emplist-div {
+        max-width: 400px !important;
+
+        .el-view-btn {
+            width: 70% !important;
+            max-width: 70% !important;
+        }
+    }
 }

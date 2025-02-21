@@ -68,7 +68,7 @@ body {
 }
 
 .body-wrapper {
-	height: 115vh;
+	min-height: 115vh;
 	background-color: #fcfcfc;
 }
 
@@ -291,5 +291,167 @@ body {
 			margin-bottom: 3px;
 		}
 	}
-
 }
+
+//------------END ADMIN REC LIST--------------//
+//--------------------------------------------//
+//---------------EMPLOYEE LIST----------------//
+
+.body-wrapper-admin {
+	min-height: 100vh;
+	margin-bottom: 7em;
+
+	.emplist-wrapper {
+		width: 92%;
+		margin: 0 auto;
+
+		.el-header {
+			margin: 1.5rem 0px;
+			font-size: 2rem;
+			text-align: center;
+		}
+
+		.emplist-div {
+			display: flex;
+			max-width: 320px;
+			margin: 1em auto .5em auto;
+
+			fieldset {
+				display: flex;
+				width: 100%;
+				border: 2px solid gray;
+				background-color: #f5f5f5;
+				padding-top: .5em;
+				padding-bottom: .5em;
+
+			}
+
+			.el-img-div {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				margin-top: .3em;
+				margin-left: .5em;
+				margin-bottom: .7em;
+				border: 1px solid darken(#efefef, 40%);
+
+				.el-img {
+					width: 75px;
+					align-items: center;
+					margin: 0 0;
+					padding: 0 0;
+					display: block;
+				}
+			}
+
+			.el-details {
+				display: flexbox;
+				width: 80%;
+				margin-left: .5em;
+				text-align: center;
+				align-self: center;
+
+				.el-id {
+					font-size: 1rem;
+					margin-bottom: 5px;
+				}
+
+				.el-name {
+					font-size: 1.6rem;
+					margin-bottom: 3px;
+				}
+
+				.el-pos {
+					margin-bottom: 10px;
+				}
+
+				.el-btn-div {
+					display: flex;
+					justify-content: space-between;
+
+					.el-view-container {
+						width: 100%;
+						height: 40px;
+						text-align: center;
+
+						.el-view-btn {
+							height: 40px;
+							text-align: center;
+							max-width: 100px;
+							border-radius: 40px;
+							background: $green;
+							border: 2px solid $green;
+							color: white;
+							letter-spacing: 1px;
+							text-shadow: 0;
+							align-items: center;
+							margin-left: 0em;
+
+
+							font: {
+								size: 12px;
+								weight: bold;
+							}
+
+							cursor: pointer;
+							transition: all .5s ease;
+
+							&:hover {
+								color: $green;
+								background: white;
+							}
+
+							&:active {
+								letter-spacing: 2px;
+							}
+						}
+					}
+
+					.el-del-container {
+						text-align: center;
+						width: 100%;
+						height: 40px;
+
+						.el-del-btn {
+							outline: none;
+							height: 40px;
+							text-align: center;
+							width: 70px;
+							border-radius: 40px;
+							background: #fcfcfc;
+							border: 3px solid $red;
+							color: $red;
+							letter-spacing: 1px;
+							text-shadow: 0;
+							align-items: center;
+
+							font: {
+								size: 12px;
+								weight: bold;
+							}
+
+							cursor: pointer;
+							transition: all .5s ease;
+
+							&:hover {
+								color: white;
+								background: $red;
+							}
+
+							&:active {
+								letter-spacing: 2px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//--------------END EMPLOYEE LIST-------------//
+//--------------------------------------------//7
