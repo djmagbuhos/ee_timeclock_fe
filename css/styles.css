@@ -116,8 +116,7 @@ body {
     opacity: 1; } }
 .li-home-xs {
   position: relative;
-  animation: slideInFromTop 0.8s ease-out;
-  /* Apply the slide-in effect */ }
+  animation: slideInFromTop 0.8s ease-out; }
   .li-home-xs .ee-banner {
     width: 100%;
     border-radius: 0 0 50px 50px;
@@ -139,14 +138,40 @@ body {
   min-height: 115vh;
   background-color: #fcfcfc; }
 
+.home-wrapper .time-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background-color: #efefef;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  font-family: 'Arial', sans-serif;
+  margin: 1em auto;
+  width: 65%; }
+.home-wrapper .real-time-date {
+  font-size: .85rem;
+  font-weight: 600;
+  color: #000000;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px; }
+.home-wrapper .real-time-clock {
+  font-size: 2.3rem;
+  color: #000000; }
 .home-wrapper .btn-div {
-  margin-top: 3em;
+  margin-top: 1.5em;
   display: flex;
   justify-content: center;
-  gap: 10px; }
+  gap: 10px;
+  width: 90%;
+  margin: 0 auto; }
+  .home-wrapper .btn-div .cico-btn {
+    border: none;
+    background-color: rgba(239, 239, 239, 0); }
   .home-wrapper .btn-div .ci-btn,
   .home-wrapper .btn-div .co-btn {
-    width: 45%;
+    width: 100%;
     border-radius: 20px;
     border: none;
     cursor: pointer;
@@ -200,6 +225,55 @@ body {
         background-color: #f4f4f4;
         font-weight: bold; }
 
+.more-opt-btn {
+  border: none; }
+
+.navmore-container {
+  width: 100%;
+  background-color: rgba(100, 100, 100, 0.95);
+  bottom: 0;
+  position: fixed;
+  height: 100%;
+  vertical-align: middle;
+  color: white; }
+  .navmore-container .close-nmcontainer {
+    display: flex;
+    justify-content: end;
+    margin-right: .5em;
+    padding: .5em;
+    margin-top: .5em;
+    font-size: 1.4rem; }
+  .navmore-container .navmorelist {
+    margin: 1em 0px 0px 0px;
+    font-size: 1.75rem;
+    text-decoration: none;
+    list-style: none;
+    vertical-align: middle; }
+    .navmore-container .navmorelist li {
+      background-color: rgba(218, 218, 218, 0.1);
+      border-top: 1px solid rgba(218, 218, 218, 0.1);
+      border-bottom: rgba(218, 218, 218, 0.1); }
+    .navmore-container .navmorelist li:active {
+      background-color: rgba(218, 218, 218, 0.25); }
+    .navmore-container .navmorelist a {
+      text-decoration: none;
+      color: #cbdded;
+      vertical-align: middle; }
+    .navmore-container .navmorelist .myrec-list {
+      margin-bottom: 20px;
+      padding-left: 1em; }
+    .navmore-container .navmorelist .navadmin-list {
+      list-style: none;
+      padding-left: 50px; }
+      .navmore-container .navmorelist .navadmin-list h1 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px; }
+      .navmore-container .navmorelist .navadmin-list li {
+        padding-left: 30px;
+        padding-bottom: 5px;
+        padding-top: 5px; }
+
 .nav-xs {
   display: flex;
   align-items: center;
@@ -216,10 +290,67 @@ body {
     align-items: center;
     width: 90%; }
 
+/* MODAL STYLES */
+.home-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  position: relative; }
+
+.modal-content h2 {
+  margin-bottom: 15px; }
+
+.modal-content label {
+  display: block;
+  text-align: left;
+  margin: 5px 0; }
+
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px; }
+
+.modal-content input[type=submit] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4784BF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem; }
+
+.modal-content input[type=submit]:hover {
+  background-color: #7dacdb; }
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer; }
+
 .li-showrec-xs {
   position: relative;
-  animation: slideInFromTop 0.8s ease-out;
-  /* Apply the slide-in effect */ }
+  animation: slideInFromTop 0.8s ease-out; }
   .li-showrec-xs .banner-rest {
     width: 100%;
     border-radius: 0 0 50px 50px;
@@ -237,7 +368,7 @@ body {
   text-align: center;
   padding-top: 3px;
   padding-bottom: 3px;
-  margin: 4% 10px 2em 4%; }
+  margin: 4% 10px 1em 4%; }
   .showrec-wrapper .sr-filter fieldset form {
     font-size: .8rem; }
     .showrec-wrapper .sr-filter fieldset form input,
@@ -246,11 +377,23 @@ body {
     .showrec-wrapper .sr-filter fieldset form select {
       font-size: .75rem; }
     .showrec-wrapper .sr-filter fieldset form input[type="submit"] {
-      background-color: #aac864;
+      display: inline-block;
       cursor: pointer;
-      border: 2px solid #008000;
-      margin-bottom: 10px;
-      margin-top: 10px; }
+      font-size: .7rem;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      letter-spacing: 1px;
+      min-width: 12px;
+      white-space: normal;
+      font-weight: 700;
+      text-align: center;
+      padding: 5px 7px;
+      color: #fff;
+      background-color: #39A869;
+      margin-bottom: 3px; }
+      .showrec-wrapper .sr-filter fieldset form input[type="submit"]:hover {
+        background-color: #4784BF;
+        color: #fff; }
 .showrec-wrapper .sr-content {
   margin-left: 4%;
   margin-right: 4%;
@@ -260,15 +403,62 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
-    border: 1px solid #ccc; }
+    border: 1px solid #a1a1a1; }
+    .showrec-wrapper .sr-content .sr-table .emp-id-table {
+      margin-left: 10px;
+      margin-right: 10px; }
     .showrec-wrapper .sr-content .sr-table th,
     .showrec-wrapper .sr-content .sr-table td {
-      border: 1px solid #ddd;
-      padding: 5px;
-      text-align: center; }
+      border: 1px solid #bbbbbb;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      text-align: center;
+      vertical-align: middle; }
     .showrec-wrapper .sr-content .sr-table th {
       background-color: #f4f4f4;
       font-weight: bold; }
+    .showrec-wrapper .sr-content .sr-table td .rec-btn-div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%; }
+    .showrec-wrapper .sr-content .sr-table td .edit-rec-btn {
+      display: inline-block;
+      cursor: pointer;
+      font-size: .7rem;
+      border: 1px solid transparent;
+      letter-spacing: 1px;
+      width: 100%;
+      text-transform: uppercase;
+      white-space: normal;
+      font-weight: 700;
+      text-align: center;
+      padding: 6px 7px;
+      color: #fff;
+      background-color: #15883e; }
+      .showrec-wrapper .sr-content .sr-table td .edit-rec-btn:hover {
+        background-color: #1db954; }
+    .showrec-wrapper .sr-content .sr-table td .del-rec-btn {
+      display: inline-block;
+      cursor: pointer;
+      border: 1px solid transparent;
+      letter-spacing: 1px;
+      width: 100%;
+      text-transform: uppercase;
+      white-space: normal;
+      font-weight: 700;
+      text-align: center;
+      padding: 2px 6px;
+      color: #fff;
+      background-color: #d51839;
+      margin-top: 1px;
+      margin-bottom: 2px; }
+      .showrec-wrapper .sr-content .sr-table td .del-rec-btn:hover {
+        background-color: #ea415e; }
+      .showrec-wrapper .sr-content .sr-table td .del-rec-btn span {
+        font-size: 1.2rem;
+        vertical-align: center; }
 
 .body-wrapper-admin fieldset {
   border-radius: 20px !important; }
@@ -279,6 +469,167 @@ body {
   .body-wrapper-admin .empid-div .emp-input-id {
     width: 100px;
     margin-bottom: 3px; }
+
+.sr-addtime-div {
+  margin-left: 4%;
+  margin-bottom: 1em; }
+  .sr-addtime-div .sr-addtime-btn {
+    height: 30px;
+    text-align: center;
+    max-width: 110px;
+    border-radius: 40px;
+    background: #366a9d;
+    border: 2px solid #366a9d;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .5s ease; }
+    .sr-addtime-div .sr-addtime-btn:hover {
+      color: white;
+      background: #4784BF; }
+    .sr-addtime-div .sr-addtime-btn:active {
+      letter-spacing: 2px; }
+
+/* MODAL STYLES */
+.edmodal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.ed-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  position: relative; }
+
+.er-empname {
+  font-size: 1.4rem !important;
+  margin-bottom: 10px; }
+
+.ed-modal-content h2 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  text-align: center; }
+
+.ed-modal-content label {
+  display: block;
+  text-align: left;
+  font-size: .9rem; }
+
+.ti-guide {
+  color: #bbbbbb;
+  font-size: .75rem; }
+
+.ti-date {
+  text-align: left;
+  margin-top: 5px;
+  font-size: 1.2rem;
+  margin-bottom: 20px; }
+
+.ed-modal-content input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 12px; }
+
+.ed-modal-content input[type=submit] {
+  margin-top: 1.5em;
+  width: 90%;
+  padding: 10px;
+  background-color: #4784BF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem; }
+
+.ed-modal-content input[type=submit]:hover {
+  background-color: #7dacdb; }
+
+.addmodal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.addmodal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  position: relative; }
+
+.addmodal-content h2 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 1.2rem; }
+
+.addmodal-content label {
+  display: block;
+  text-align: left;
+  font-size: .9rem; }
+
+.addmodal-content input[type=number],
+.addmodal-content input[type=date],
+.addmodal-content select {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 12px; }
+
+.addmodal-content input[type=submit] {
+  margin-top: 1.5em;
+  width: 100%;
+  padding: 10px;
+  background-color: #4784BF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem; }
+
+.addmodal-content input[type=submit]:hover {
+  background-color: #7dacdb; }
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer; }
 
 .body-wrapper-admin {
   min-height: 100vh;
@@ -345,8 +696,8 @@ body {
               text-align: center;
               max-width: 100px;
               border-radius: 40px;
-              background: #39A869;
-              border: 2px solid #39A869;
+              background: #2c8251;
+              border: 2px solid #2c8251;
               color: white;
               letter-spacing: 1px;
               text-shadow: 0;
@@ -357,8 +708,8 @@ body {
               cursor: pointer;
               transition: all .5s ease; }
               .body-wrapper-admin .emplist-wrapper .emplist-div .el-details .el-btn-div .el-view-container .el-view-btn:hover {
-                color: #39A869;
-                background: white; }
+                color: white;
+                background: #39A869; }
               .body-wrapper-admin .emplist-wrapper .emplist-div .el-details .el-btn-div .el-view-container .el-view-btn:active {
                 letter-spacing: 2px; }
           .body-wrapper-admin .emplist-wrapper .emplist-div .el-details .el-btn-div .el-del-container {
@@ -387,11 +738,98 @@ body {
               .body-wrapper-admin .emplist-wrapper .emplist-div .el-details .el-btn-div .el-del-container .el-del-btn:active {
                 letter-spacing: 2px; }
 
+.addemp-wrapper {
+  margin: 15px; }
+  .addemp-wrapper .addemp-header {
+    font-size: 2rem;
+    text-align: center;
+    margin: .7em 0; }
+  .addemp-wrapper fieldset {
+    display: flex;
+    width: 100%;
+    border: 2px solid gray;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    max-width: 440px; }
+    .addemp-wrapper fieldset form {
+      margin: 0 1rem; }
+      .addemp-wrapper fieldset form input[type=text],
+      .addemp-wrapper fieldset form input[type=date],
+      .addemp-wrapper fieldset form input[type=email],
+      .addemp-wrapper fieldset form input[type=password],
+      .addemp-wrapper fieldset form input[type=number],
+      .addemp-wrapper fieldset form textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #bbbbbb;
+        border-radius: 8px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: none;
+        font-size: 1rem; }
+      .addemp-wrapper fieldset form .ae-img-div {
+        margin: 1em auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 1px solid #898989; }
+        .addemp-wrapper fieldset form .ae-img-div .ae-img {
+          width: 250px;
+          align-items: center;
+          margin: 0 0;
+          padding: 0 0;
+          display: block; }
+      .addemp-wrapper fieldset form .ae-file {
+        margin: 10px auto;
+        margin-bottom: 1rem;
+        background-color: #f1f6fa;
+        border-radius: 2rem; }
+        .addemp-wrapper fieldset form .ae-file::file-selector-button {
+          padding: .5rem .5rem;
+          border-width: 0;
+          border-radius: 2rem;
+          background-color: #366a9d;
+          color: white;
+          transition: all .25s ease-in-out;
+          cursor: pointer;
+          margin-right: 1em; }
+        .addemp-wrapper fieldset form .ae-file:hover {
+          border-color: #888; }
+          .addemp-wrapper fieldset form .ae-file:hover::file-selector-button {
+            background-color: #6d9dcc; }
+      .addemp-wrapper fieldset form .ae-upload-div {
+        text-align: center; }
+      .addemp-wrapper fieldset form .ae-submit {
+        display: inline-block;
+        cursor: pointer;
+        font-size: .7rem;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        letter-spacing: 1px;
+        width: 100%;
+        text-transform: uppercase;
+        white-space: normal;
+        font-weight: 700;
+        text-align: center;
+        padding: 11px 7px;
+        color: #fff;
+        background-color: #4784BF;
+        margin-bottom: 15px;
+        margin-top: 20px; }
+        .addemp-wrapper fieldset form .ae-submit:hover {
+          background-color: #6d9dcc; }
+
 @media only screen and (min-width: 35em) {
   .li-home-xs {
     display: none; }
 
-  .nav-xs {
+  .nav-xs,
+  .navmore-container {
     display: none; }
 
   body {
@@ -458,69 +896,9 @@ body {
       margin-left: 5px;
       align-items: center;
       font-size: 2rem; }
-    .li-home-ml .user-container {
-      display: flex;
-      margin-left: auto;
-      margin-bottom: auto;
-      flex-shrink: 0; }
-      .li-home-ml .user-container .user-pfp {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        width: 35px;
-        /* Keep the container fixed */
-        height: 35px;
-        /* Maintain a square aspect ratio */
-        border-radius: 50%; }
-        .li-home-ml .user-container .user-pfp img {
-          width: 45px;
-          align-items: center;
-          margin: 0 0;
-          padding: 0 0;
-          display: block; }
-      .li-home-ml .user-container .user-dd {
-        margin-top: 10px;
-        position: relative;
-        width: 75%; }
-        .li-home-ml .user-container .user-dd .profile-header {
-          list-style: none;
-          margin: 0;
-          padding: 0; }
-          .li-home-ml .user-container .user-dd .profile-header .profile-dropdown {
-            position: relative;
-            cursor: pointer; }
-            .li-home-ml .user-container .user-dd .profile-header .profile-dropdown a {
-              text-decoration: none;
-              color: black;
-              padding: 2px 3px;
-              display: inline-block;
-              border-radius: 5px;
-              transition: 0.3s;
-              text-overflow: ellipsis; }
-            .li-home-ml .user-container .user-dd .profile-header .profile-dropdown:hover .profile-dd {
-              display: block; }
-            .li-home-ml .user-container .user-dd .profile-header .profile-dropdown .profile-dd {
-              display: none;
-              position: absolute;
-              right: 0;
-              background: #fafafa;
-              box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-              border-radius: 5px;
-              list-style: none;
-              padding: 3px;
-              font-size: .85rem; }
-              .li-home-ml .user-container .user-dd .profile-header .profile-dropdown .profile-dd li {
-                padding: 2px 3px;
-                border-bottom: 1px solid #ddd; }
-                .li-home-ml .user-container .user-dd .profile-header .profile-dropdown .profile-dd li:last-child {
-                  border-bottom: none; }
-                .li-home-ml .user-container .user-dd .profile-header .profile-dropdown .profile-dd li a {
-                  color: black;
-                  text-decoration: none;
-                  display: block; }
-                  .li-home-ml .user-container .user-dd .profile-header .profile-dropdown .profile-dd li a:hover {
-                    background: #f0f0f0; }
+
+  .time-div {
+    max-width: 300px; }
 
   .ml-navbar {
     background-color: #e4e4e4;
@@ -531,10 +909,6 @@ body {
       gap: 20px;
       padding: 10px 0;
       list-style: none !important; }
-    .ml-navbar .ml-nav-ul li {
-      display: inline-block; }
-    .ml-navbar .ml-nav-ul li:first-child {
-      margin-left: 2em; }
     .ml-navbar .ml-nav-ul li a {
       text-decoration: none;
       color: black;
@@ -545,9 +919,46 @@ body {
       color: #4784BF;
       /* Change color on hover */ }
 
+  .ml-nav-ul li {
+    position: relative;
+    cursor: pointer; }
+
+  .ml-nav-ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #cbcbcb;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    /* Initially hide the submenu */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    min-width: 150px; }
+
+  .ml-nav-ul li ul li {
+    width: 100%; }
+
+  .ml-nav-ul li ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: background 0.3s ease-in-out; }
+
+  .ml-nav-ul li ul li a:hover {
+    background-color: #d6d6d6; }
+
+  /* Show the submenu on hover */
+  .ml-nav-ul li:hover > ul {
+    display: block; }
+
+  /* Show submenu on focus for accessibility */
+  .ml-nav-ul li:focus-within ul {
+    display: block; }
+
   .home-wrapper {
     margin-top: 0;
-    padding-top: 2.5em; }
+    padding-top: .5em; }
     .home-wrapper .btn-div {
       margin-top: 0; }
 
@@ -578,6 +989,53 @@ body {
     background-color: rgba(255, 255, 255, 0.4);
     padding-bottom: 4em; }
 
+  .rec-btn-div {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; }
+
+  .edit-rec-btn {
+    display: inline-block;
+    cursor: pointer;
+    font-size: .7rem;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    letter-spacing: 1px;
+    width: 55px !important;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 7px 8px !important;
+    color: #fff;
+    background-color: #15883e; }
+    .edit-rec-btn:hover {
+      background-color: #1db954; }
+
+  .del-rec-btn {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    letter-spacing: 1px;
+    width: 50px !important;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 2px 6px;
+    color: #fff;
+    background-color: #d51839;
+    margin-top: 3px !important;
+    margin-bottom: 2px; }
+    .del-rec-btn:hover {
+      background-color: #ea415e; }
+    .del-rec-btn span {
+      font-size: 1.2rem;
+      vertical-align: center; }
+
   .emplist-wrapper {
     width: 95% !important; }
     .emplist-wrapper .elist-container {
@@ -585,13 +1043,27 @@ body {
       .emplist-wrapper .elist-container .emplist-div {
         float: left;
         width: 48%;
-        margin: 5px; } }
+        margin: 5px; }
+
+  .addemp-wrapper fieldset {
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 0 2em; }
+    .addemp-wrapper fieldset .ae-submit-div {
+      text-align: center; }
+    .addemp-wrapper fieldset .ae-submit {
+      font-size: .9rem !important;
+      max-width: 250px;
+      border-radius: 30px !important;
+      text-align: center;
+      padding: 12px 7px !important; } }
 @media only screen and (min-width: 64em) {
   .btn-div {
-    gap: 3em !important; }
+    gap: 0em !important;
+    width: 80% !important; }
     .btn-div .ci-btn,
     .btn-div .co-btn {
-      width: 30% !important; }
+      width: 80% !important; }
 
   .home-content {
     width: 70%;
@@ -628,6 +1100,16 @@ body {
     width: 100%; }
     .elist-container .emplist-div {
       max-width: 400px !important; }
+      .elist-container .emplist-div .el-img-div {
+        width: 75px !important;
+        height: 75px !important; }
+        .elist-container .emplist-div .el-img-div .el-img {
+          width: 90px !important; }
       .elist-container .emplist-div .el-view-btn {
         width: 70% !important;
-        max-width: 70% !important; } }
+        max-width: 70% !important;
+        float: right;
+        margin-right: 1.4em; }
+      .elist-container .emplist-div .el-del-btn {
+        float: right;
+        margin-right: 1.5em; } }

@@ -13,8 +13,6 @@ html {
 
 // ---------MAIN PAGE----------- //
 
-
-
 .li-home-ml,
 .ml-navbar,
 .ml-puzzle-img,
@@ -40,24 +38,24 @@ body {
 }
 
 .li-home-xs {
-	position: relative; // Ensures child elements use this as reference
+	position: relative;
 	animation: slideInFromTop 0.8s ease-out;
-	/* Apply the slide-in effect */
+
 
 	.ee-banner {
 		width: 100%;
 		border-radius: 0 0 50px 50px;
-		display: block; // Ensures no extra space below the image
+		display: block;
 		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 	}
 
 	.banner-text {
 		position: absolute;
-		top: 75%; // Moves the text inside the image
+		top: 75%;
 		left: 50%;
-		transform: translate(-50%, -50%); // Centers the text
+		transform: translate(-50%, -50%);
 		text-align: center;
-		color: rgb(0, 0, 0); // Ensure visibility
+		color: rgb(0, 0, 0);
 		font-size: 1.5rem;
 
 		.banner-position {
@@ -73,30 +71,63 @@ body {
 }
 
 .home-wrapper {
+	.time-div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2px;
+		background-color: rgba(239, 239, 239, 1);
+		padding: 8px 12px;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+		font-family: 'Arial', sans-serif;
+		margin: 1em auto;
+		width: 65%;
+	}
+
+	.real-time-date {
+		font-size: .85rem;
+		font-weight: 600;
+		color: #000000;
+		letter-spacing: 0.5px;
+		margin-bottom: 3px;
+	}
+
+	.real-time-clock {
+		font-size: 2.3rem;
+		color: #000000;
+	}
 
 	.btn-div {
-		margin-top: 3em;
+		margin-top: 1.5em;
 		display: flex;
 		justify-content: center;
 		gap: 10px;
+		width: 90%;
+		margin: 0 auto;
+
+		.cico-btn {
+			border: none;
+			background-color: rgba(239, 239, 239, 0);
+		}
 
 		.ci-btn,
 		.co-btn {
-			width: 45%; // Keeping your defined width
-			border-radius: 20px; // Keeping your border-radius
+			width: 100%;
+			border-radius: 20px;
 			border: none;
-			cursor: pointer; // Indicates it's clickable
-			transition: all 0.2s ease-in-out; // Smooth effect
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Adds initial shadow
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
 			&:hover {
-				opacity: 0.85; // Slight fade effect on hover
-				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); // More shadow on hover
+				opacity: 0.85;
+				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 			}
 
 			&:active {
-				transform: scale(0.96); // Slight press-down effect
-				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); // Smaller shadow when pressed
+				transform: scale(0.96);
+				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 			}
 		}
 
@@ -164,6 +195,78 @@ body {
 	}
 }
 
+.more-opt-btn {
+	border: none;
+}
+
+.navmore-container {
+	width: 100%;
+	background-color: rgba(100, 100, 100, 0.95);
+	bottom: 0;
+	position: fixed;
+	height: 100%;
+	vertical-align: middle;
+	color: white;
+
+	.close-nmcontainer {
+		display: flex;
+		justify-content: end;
+		margin-right: .5em;
+		padding: .5em;
+		margin-top: .5em;
+		font-size: 1.4rem;
+	}
+
+
+
+	.navmorelist {
+		margin: 1em 0px 0px 0px;
+		font-size: 1.75rem;
+		text-decoration: none;
+		list-style: none;
+		vertical-align: middle;
+
+		li {
+			background-color: lighten(rgba(192, 192, 192, 0.10), 10%);
+			border-top: 1px solid lighten(rgba(192, 192, 192, 0.1), 10%);
+			border-bottom: lighten(rgba(192, 192, 192, 0.10), 10%);
+		}
+
+		li:active {
+			background-color: lighten(rgba(192, 192, 192, 0.25), 10%);
+		}
+
+		a {
+			text-decoration: none;
+			color: lighten($blue, 35%);
+			vertical-align: middle;
+		}
+
+		.myrec-list {
+			margin-bottom: 20px;
+			padding-left: 1em;
+		}
+
+		.navadmin-list {
+			list-style: none;
+			padding-left: 50px;
+
+			h1 {
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 10px;
+			}
+
+			li {
+				// background-color: lighten(rgba(192, 192, 192, 0.90), 15%);
+				padding-left: 30px;
+				padding-bottom: 5px;
+				padding-top: 5px;
+			}
+		}
+	}
+}
+
 .nav-xs {
 	display: flex;
 	align-items: center;
@@ -183,6 +286,72 @@ body {
 	}
 }
 
+/* MODAL STYLES */
+.home-modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal-content {
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	width: 300px;
+	text-align: center;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+	position: relative;
+}
+
+.modal-content h2 {
+	margin-bottom: 15px;
+}
+
+.modal-content label {
+	display: block;
+	text-align: left;
+	margin: 5px 0;
+}
+
+.modal-content input {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.modal-content input[type=submit] {
+	width: 100%;
+	padding: 10px;
+	background-color: #4784BF;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1rem;
+}
+
+.modal-content input[type=submit]:hover {
+	background-color: #7dacdb;
+}
+
+.close {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
 // ------------END MAIN PAGE-------------- //
 
 // ---------------------------------------//
@@ -190,9 +359,8 @@ body {
 // ----------SHOW RECORD PAGE------------- //
 
 .li-showrec-xs {
-	position: relative; // Ensures child elements use this as reference
+	position: relative;
 	animation: slideInFromTop 0.8s ease-out;
-	/* Apply the slide-in effect */
 
 	.banner-rest {
 		width: 100%;
@@ -217,7 +385,7 @@ body {
 			text-align: center;
 			padding-top: 3px;
 			padding-bottom: 3px;
-			margin: 4% 10px 2em 4%;
+			margin: 4% 10px 1em 4%;
 
 			form {
 				font-size: .8rem;
@@ -232,11 +400,26 @@ body {
 				}
 
 				input[type="submit"] {
-					background-color: #aac864;
+					display: inline-block;
 					cursor: pointer;
-					border: 2px solid #008000;
-					margin-bottom: 10px;
-					margin-top: 10px;
+					font-size: .7rem;
+					border-radius: 12px;
+					border: 1px solid transparent;
+					letter-spacing: 1px;
+					min-width: 12px;
+					// text-transform: uppercase;
+					white-space: normal;
+					font-weight: 700;
+					text-align: center;
+					padding: 5px 7px;
+					color: #fff;
+					background-color: $green;
+					margin-bottom: 3px;
+
+					&:hover {
+						background-color: $blue;
+						color: #fff;
+					}
 				}
 			}
 		}
@@ -252,18 +435,81 @@ body {
 			width: 100%;
 			border-collapse: collapse;
 			margin: 0 auto;
-			border: 1px solid #ccc;
+			border: 1px solid #a1a1a1;
+
+			.emp-id-table {
+				margin-left: 10px;
+				margin-right: 10px;
+			}
 
 			th,
 			td {
-				border: 1px solid #ddd;
-				padding: 5px;
+				border: 1px solid #bbbbbb;
+				padding-top: 5px;
+				padding-bottom: 5px;
 				text-align: center;
+				vertical-align: middle;
 			}
 
 			th {
 				background-color: #f4f4f4;
 				font-weight: bold;
+			}
+
+			td {
+				.rec-btn-div {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+				}
+
+				.edit-rec-btn {
+					display: inline-block;
+					cursor: pointer;
+					font-size: .7rem;
+					border: 1px solid transparent;
+					letter-spacing: 1px;
+					width: 100%;
+					text-transform: uppercase;
+					white-space: normal;
+					font-weight: 700;
+					text-align: center;
+					padding: 6px 7px;
+					color: #fff;
+					background-color: #15883e;
+
+					&:hover {
+						background-color: #1db954;
+					}
+				}
+
+				.del-rec-btn {
+					display: inline-block;
+					cursor: pointer;
+					border: 1px solid transparent;
+					letter-spacing: 1px;
+					width: 100%;
+					text-transform: uppercase;
+					white-space: normal;
+					font-weight: 700;
+					text-align: center;
+					padding: 2px 6px;
+					color: #fff;
+					background-color: darken($red, 5%);
+					margin-top: 1px;
+					margin-bottom: 2px;
+
+					&:hover {
+						background-color: lighten($red, 7%);
+					}
+
+					span {
+						font-size: 1.2rem;
+						vertical-align: center;
+					}
+				}
 			}
 		}
 	}
@@ -291,6 +537,203 @@ body {
 			margin-bottom: 3px;
 		}
 	}
+}
+
+.sr-addtime-div {
+	margin-left: 4%;
+	margin-bottom: 1em;
+
+	.sr-addtime-btn {
+		height: 30px;
+		text-align: center;
+		max-width: 110px;
+		border-radius: 40px;
+		background: darken($blue, 10%);
+		border: 2px solid darken($blue, 10%);
+		color: white;
+		letter-spacing: 1px;
+		text-shadow: 0;
+		align-items: center;
+		padding: 5px 10px;
+
+
+		font: {
+			size: 1rem;
+			// weight: bold;
+		}
+
+		cursor: pointer;
+		transition: all .5s ease;
+
+		&:hover {
+			color: white;
+			background: $blue;
+		}
+
+		&:active {
+			letter-spacing: 2px;
+		}
+
+	}
+}
+
+/* MODAL STYLES */
+.edmodal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ed-modal-content {
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	width: 300px;
+	text-align: left;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+	position: relative;
+}
+
+.er-empname {
+	font-size: 1.4rem !important;
+	margin-bottom: 10px;
+}
+
+.ed-modal-content h2 {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+.ed-modal-content label {
+	display: block;
+	text-align: left;
+	font-size: .9rem;
+}
+
+.ti-guide {
+	color: $gray;
+	font-size: .75rem;
+}
+
+.ti-date {
+	text-align: left;
+	margin-top: 5px;
+	font-size: 1.2rem;
+	margin-bottom: 20px;
+}
+
+.ed-modal-content input[type=number] {
+	-moz-appearance: textfield;
+	-webkit-appearance: none;
+	appearance: none;
+	padding: 8px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-top: 12px;
+}
+
+.ed-modal-content input[type=submit] {
+	margin-top: 1.5em;
+	width: 90%;
+	padding: 10px;
+	background-color: $blue;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1rem;
+}
+
+.ed-modal-content input[type=submit]:hover {
+	background-color: #7dacdb;
+}
+
+.addmodal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.addmodal-content {
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	width: 300px;
+	text-align: left;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+	position: relative;
+}
+
+.addmodal-content h2 {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	font-size: 1.2rem;
+}
+
+.addmodal-content label {
+	display: block;
+	text-align: left;
+	font-size: .9rem;
+}
+
+.addmodal-content {
+
+	input[type=number],
+	input[type=date],
+	select {
+		-moz-appearance: textfield;
+		-webkit-appearance: none;
+		appearance: none;
+		padding: 8px;
+		margin-bottom: 15px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		margin-top: 12px;
+	}
+
+}
+
+.addmodal-content input[type=submit] {
+	margin-top: 1.5em;
+	width: 100%;
+	padding: 10px;
+	background-color: $blue;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1rem;
+}
+
+.addmodal-content input[type=submit]:hover {
+	background-color: #7dacdb;
+}
+
+.close {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 20px;
+	cursor: pointer;
 }
 
 //------------END ADMIN REC LIST--------------//
@@ -383,8 +826,8 @@ body {
 							text-align: center;
 							max-width: 100px;
 							border-radius: 40px;
-							background: $green;
-							border: 2px solid $green;
+							background: darken($green, 10%);
+							border: 2px solid darken($green, 10%);
 							color: white;
 							letter-spacing: 1px;
 							text-shadow: 0;
@@ -401,8 +844,8 @@ body {
 							transition: all .5s ease;
 
 							&:hover {
-								color: $green;
-								background: white;
+								color: white;
+								background: $green;
 							}
 
 							&:active {
@@ -454,4 +897,119 @@ body {
 }
 
 //--------------END EMPLOYEE LIST-------------//
-//--------------------------------------------//7
+//--------------------------------------------//
+//--------------ADD EMPLOYEE------------------//
+
+.addemp-wrapper {
+	margin: 15px;
+
+	.addemp-header {
+		font-size: 2rem;
+		text-align: center;
+		margin: .7em 0;
+	}
+
+	fieldset {
+		display: flex;
+		width: 100%;
+		border: 2px solid gray;
+		// background-color: #f5f5f5;
+		padding-top: .5em;
+		padding-bottom: .5em;
+		max-width: 440px;
+
+		form {
+			margin: 0 1rem;
+
+			input[type=text],
+			input[type=date],
+			input[type=email],
+			input[type=password],
+			input[type=number],
+			textarea {
+				width: 100%;
+				padding: 12px;
+				border: 1px solid $gray;
+				border-radius: 8px;
+				box-sizing: border-box;
+				margin-top: 6px;
+				margin-bottom: 16px;
+				resize: none;
+				font-size: 1rem;
+			}
+
+			.ae-img-div {
+				margin: 1em auto;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				border: 1px solid darken(#efefef, 40%);
+
+				.ae-img {
+					width: 250px;
+					align-items: center;
+					margin: 0 0;
+					padding: 0 0;
+					display: block;
+				}
+			}
+
+			.ae-file {
+				margin: 10px auto;
+				margin-bottom: 1rem;
+				background-color: lighten($blue, 45%);
+				border-radius: 2rem;
+
+				&::file-selector-button {
+					padding: .5rem .5rem;
+					border-width: 0;
+					border-radius: 2rem;
+					background-color: darken($blue, 10%);
+					color: white;
+					transition: all .25s ease-in-out;
+					cursor: pointer;
+					margin-right: 1em;
+				}
+
+				&:hover {
+					border-color: #888;
+
+					&::file-selector-button {
+						background-color: lighten($blue, 10%);
+					}
+				}
+			}
+
+			.ae-upload-div {
+				text-align: center;
+			}
+
+			.ae-submit {
+				display: inline-block;
+				cursor: pointer;
+				font-size: .7rem;
+				border-radius: 20px;
+				border: 1px solid transparent;
+				letter-spacing: 1px;
+				width: 100%;
+				text-transform: uppercase;
+				white-space: normal;
+				font-weight: 700;
+				text-align: center;
+				padding: 11px 7px;
+				color: #fff;
+				background-color: $blue;
+				margin-bottom: 15px;
+				margin-top: 20px;
+
+				&:hover {
+					background-color: lighten($blue, 10%);
+				}
+			}
+		}
+	}
+}

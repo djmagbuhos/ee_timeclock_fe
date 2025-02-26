@@ -1,10 +1,11 @@
 // ------------ MAIN PAGE -------------- //
 .btn-div {
-    gap: 3em !important;
+    gap: 0em !important;
+    width: 80% !important;
 
     .ci-btn,
     .co-btn {
-        width: 30% !important;
+        width: 80% !important;
     }
 }
 
@@ -68,9 +69,25 @@
     .emplist-div {
         max-width: 400px !important;
 
+        .el-img-div {
+            width: 75px !important;
+            height: 75px !important;
+
+            .el-img {
+                width: 90px !important;
+            }
+        }
+
         .el-view-btn {
             width: 70% !important;
             max-width: 70% !important;
+            float: right;
+            margin-right: 1.4em;
+        }
+
+        .el-del-btn {
+            float: right;
+            margin-right: 1.5em;
         }
     }
 }
