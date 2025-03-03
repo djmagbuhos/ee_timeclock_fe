@@ -109,14 +109,6 @@ body {
 		list-style: none !important;
 	}
 
-	// .ml-nav-ul li {
-	// 	display: inline-block;
-	// }
-
-	// .ml-nav-ul li:first-child {
-	// 	margin-left: 2em;
-	// }
-
 	.ml-nav-ul li a {
 		text-decoration: none;
 		color: black;
@@ -175,6 +167,26 @@ body {
 /* Show submenu on focus for accessibility */
 .ml-nav-ul li:focus-within ul {
 	display: block;
+}
+
+.nav-userdiv {
+	margin-left: auto;
+	margin-right: 1em;
+
+	li a {
+		font-size: .8rem;
+	}
+}
+
+.nav-loggeduser {
+	font-size: .8rem;
+
+	span {
+		border-right: solid 1px black;
+		margin-right: 4px;
+		margin-left: 4px;
+	}
+
 }
 
 
@@ -240,6 +252,27 @@ body {
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
+}
+
+.view-rec-btn {
+	display: inline-block;
+	cursor: pointer;
+	font-size: .7rem;
+	border-radius: 12px;
+	border: 1px solid transparent;
+	letter-spacing: 1px;
+	width: 55px !important;
+	text-transform: uppercase;
+	white-space: normal;
+	font-weight: 700;
+	text-align: center;
+	padding: 7px 8px !important;
+	color: #fff;
+	background-color: #15883e;
+
+	&:hover {
+		background-color: #1db954;
+	}
 }
 
 .edit-rec-btn {

@@ -145,6 +145,7 @@
                         <td>04:03</td>
                         <td>
                             <div class="rec-btn-div">
+                            <button class="view-rec-btn">view</button>
                             <button class="edit-rec-btn">edit</button>
                             <button class="del-rec-btn">
                                 <span class="material-symbols-outlined">
@@ -162,6 +163,7 @@
                         <td>04:03</td>
                         <td>
                             <div class="rec-btn-div">
+                            <button class="view-rec-btn">view</button>
                             <button class="edit-rec-btn">edit</button>
                             <button class="del-rec-btn">
                                 <span class="material-symbols-outlined">
@@ -179,6 +181,7 @@
                         <td>04:03</td>
                         <td>
                             <div class="rec-btn-div">
+                            <button class="view-rec-btn">view</button>
                             <button class="edit-rec-btn">edit</button>
                             <button class="del-rec-btn">
                                 <span class="material-symbols-outlined">
@@ -196,6 +199,7 @@
                         <td>04:03</td>
                         <td>
                             <div class="rec-btn-div">
+                            <button class="view-rec-btn">view</button>
                             <button class="edit-rec-btn">edit</button>
                             <button class="del-rec-btn">
                                 <span class="material-symbols-outlined">
@@ -213,6 +217,7 @@
                         <td>04:03</td>
                         <td>
                             <div class="rec-btn-div">
+                            <button class="view-rec-btn">view</button>
                             <button class="edit-rec-btn">edit</button>
                             <button class="del-rec-btn">
                                 <span class="material-symbols-outlined">
@@ -230,6 +235,7 @@
                         <td>04:03</td>
                         <td>
                             <div class="rec-btn-div">
+                            <button class="view-rec-btn">view</button>
                             <button class="edit-rec-btn">edit</button>
                             <button class="del-rec-btn">
                                 <span class="material-symbols-outlined">
@@ -247,6 +253,7 @@
                         <td>04:03</td>
                         <td>
                             <div class="rec-btn-div">
+                            <button class="view-rec-btn">view</button>
                             <button class="edit-rec-btn">edit</button>
                             <button class="del-rec-btn">
                                 <span class="material-symbols-outlined">
@@ -264,6 +271,7 @@
                         <td>04:03</td>
                         <td>
                             <div class="rec-btn-div">
+                            <button class="view-rec-btn">view</button>
                             <button class="edit-rec-btn">edit</button>
                             <button class="del-rec-btn">
                                 <span class="material-symbols-outlined">
@@ -296,18 +304,32 @@
         <div class="nav-xs">
             <div class="nav-xs-icons">
                 <img src="img/icons/show-all.png" class="show-all-ia" alt="show logs logo">
-                <img src="img/icons/home-active.png" class="home-a" alt="home logo">
+                <img src="img/icons/home.png" class="home-a" alt="home logo">
                 <button class="more-opt-btn"><img src="img/icons/more.png" class="show-more-ia" alt="show more"></button>
             </div>
         </div>
         <!-- END XS BOT NAV -->
     </div>
 
-    <footer class="ml-footer">
-        <p>&copy; 2024 - Everyeight Company - <a href="#">Contact Us</a></p>
-    </footer>
-
     <!-- MODAL SECTION -->
+     <!-- VIEW MODAL -->
+    <div id="viewModal" class="viewmodal">
+        <div class="view-modal-content">
+            <span class="close">&times;</span>
+            <h2>Juan Dela Cruz</h2>
+            <h3>Date</h3>
+            <p>01/06/2025</p>
+            <h3>Time In</h3>
+            <p>09:00</p>
+            <h3>Time Out</h3>
+            <p>01:03</p>
+            <h3>Total Hours</h3>
+            <p>04:03</p>
+            <h3>Status</h3>
+            <p class="view-status">Approved</p>
+        </div>
+    </div>
+    
     <!-- EDIT MODAL -->
     
     <div id="editModal" class="edmodal">
@@ -332,6 +354,15 @@
                     <input type="number" min="0" max="24" placeholder="hh">
                     :
                     <input type="number" min="0" max="24" placeholder="mm">
+                </div>
+
+                <div class="edit-status">
+                    <label for="status">Status</label>
+                    <select name="status" id="">
+                        <option value="">Approved</option>
+                        <option value="">Rejected</option>
+                        <option value="" selected>NA</option>
+                    </select>
                 </div>
                 <input type="submit">
             </form>
@@ -370,9 +401,24 @@
                     <input type="number" min="0" max="24" placeholder="mm">
                 </div>
 
+                <div class="add-status">
+                    <label for="status">Status</label>
+                    <select name="status" id="">
+                        <option value="">Approved</option>
+                        <option value="">Rejected</option>
+                        <option value="" selected>NA</option>
+                    </select>
+                </div>
+
                 <input type="submit">
             </form>
         </div>
     </div>
+    <!-- END ADD MODAL -->
+    
+    <footer class="ml-footer">
+        <p>&copy; 2024 - Everyeight Company - <a href="#">Contact Us</a></p>
+    </footer>
+
 </body>
 </html>

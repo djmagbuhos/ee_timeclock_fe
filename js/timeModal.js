@@ -66,4 +66,21 @@ $(document).ready(function () {
             $("#addModal").fadeOut();
         }
     });
+
+    // ADD TIME MODAL
+    $("#viewModal").hide();
+
+    $(".view-rec-btn").on("click", function () {
+        $("#viewModal").fadeIn();
+    });
+
+    $(".close").on("click", function () {
+        $("#viewModal").fadeOut();
+    });
+
+    $(window).on("click", function (event) {
+        if ($(event.target).is("#viewModal")) {
+            $("#viewModal").fadeOut();
+        }
+    });
 });
